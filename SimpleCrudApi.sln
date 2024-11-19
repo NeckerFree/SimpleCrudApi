@@ -11,7 +11,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "pulumi-azure", "pulumi-azure\pulumi-azure.csproj", "{61DEE571-5EAF-416D-8AD2-CEF1238D6459}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PulumiAzure", "pulumi-azure\PulumiAzure.csproj", "{61DEE571-5EAF-416D-8AD2-CEF1238D6459}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

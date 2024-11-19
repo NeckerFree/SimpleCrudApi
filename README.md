@@ -1,28 +1,18 @@
+
 # SimpleCrudApi
 
-docker build -t azure-crud:latest .
-docker run -d -p 8080:8080 azure-crud
+docker build . -t simple-dotnet-crud
+docker run -d -p 8080:8080 simple-dotnet-crud
 
-Azure region: EastUS
+docker login
+docker build . -t necker3000/simple-dotnet-crud:latest
+docker push necker3000/simple-dotnet-crud:latest
 
-
+Azure region: Canada Central
 Push the Docker image to your container registry:
 
 docker tag my-dotnet-app <your-registry-login-server>/my-dotnet-app:latest
-docker push <your-registry-login-server>/my-dotnet-app:latest
 
 pulumi preview
 pulumi up
-
-This approach will create 
-- an Azure Resource Group, 
-- Container Registry, 
-- Container Instance 
-and deploy your Dockerized .NET application.
-
-
-
-
-
-
-
+pulumi destroy
