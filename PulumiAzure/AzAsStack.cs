@@ -32,8 +32,11 @@ namespace PulumiAzure
                 Reserved = true, // Required for Linux-based apps
                 Sku = new SkuDescriptionArgs
                 {
-                    Name = "F1", // Free Tier
-                    Tier = "Free",
+                    //Name = "F1", // Free Tier
+                    //Tier = "Free",
+                    Name = "B1", // Basic Tier
+                    Tier = "Basic",
+
                 }
             });
 
@@ -48,9 +51,10 @@ namespace PulumiAzure
                     AppSettings =
                 {
                     new NameValuePairArgs { Name = "DOCKER_REGISTRY_SERVER_URL", Value = "https://index.docker.io" },
-                    new NameValuePairArgs { Name = "DOCKER_REGISTRY_SERVER_USERNAME", Value = "" },
-                    new NameValuePairArgs { Name = "DOCKER_REGISTRY_SERVER_PASSWORD", Value = "" },
+                    new NameValuePairArgs { Name = "DOCKER_REGISTRY_SERVER_USERNAME", Value = "necker3000" },
+                    new NameValuePairArgs { Name = "DOCKER_REGISTRY_SERVER_PASSWORD", Value = "e2n0c0m2dh$" },
                     new NameValuePairArgs { Name = "WEBSITES_PORT", Value = "80" } // Port your container listens on
+                    , new NameValuePairArgs { Name = "DOCKER_ENABLE_CI_LOGGING", Value = "true" }
                 },
                     LinuxFxVersion = $"DOCKER|{dockerImage}"
                 }

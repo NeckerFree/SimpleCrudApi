@@ -1,4 +1,4 @@
-name: pulumi-azure
+name: PulumiAzure
 description: Repo to dockerize and publish image to azure
 runtime: dotnet
 config:
